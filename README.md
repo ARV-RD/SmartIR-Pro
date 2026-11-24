@@ -1,0 +1,1 @@
+# SmartIR Pro - интеграция HomeAssistance
