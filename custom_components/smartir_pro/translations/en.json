@@ -1,0 +1,17 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "SmartIR Pro Remote Setup",
+        "description": "Select the ESPHome service for sending Base64 IR commands",
+        "data": {
+          "name": "Remote Name",
+          "esphome_service": "ESPHome Service (*_send_b64)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "This remote service is already configured"
+    }
+  }
+}

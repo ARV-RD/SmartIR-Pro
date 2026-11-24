@@ -1,0 +1,17 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Подключение пульта SmartIR Pro",
+        "description": "Выберите ESPHome-сервис отправки Base64-команд",
+        "data": {
+          "name": "Название пульта",
+          "esphome_service": "Сервис ESPHome (*_send_b64)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Этот сервис пульта уже добавлен"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "domain": "smartir_pro",
+  "name": "SmartIR Pro Remote",
+  "codeowners": ["@ARV-RD"],
+  "config_flow": true,
+  "dependencies": ["esphome"],
+  "documentation": "https://github.com/ARV-RD/SmartIR-Pro",
+  "iot_class": "local_push",
+  "version": "1.0.0"
+}
