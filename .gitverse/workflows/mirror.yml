@@ -1,0 +1,18 @@
+﻿name: Mirror to GitHub
+on:
+  push:
+    branches: [ master, main ]
+    tags: [ '*' ]
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Push to GitHub
+        run: |
+          git push --force --tags https://${{ secrets.GH_MIRROR_ACTOR }}:${{ secrets.GH_MIRROR_TOKEN }}@://github.com{{ secrets.GH_MIRROR_ACTOR }}/${{ secrets.GH_MIRROR_REPO }}.git HEAD:${{ github.ref_name }}
