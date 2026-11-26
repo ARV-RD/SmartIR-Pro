@@ -1,4 +1,4 @@
-import voluptuous as vol
+Ôªøimport voluptuous as vol
 from homeassistant import config_entries
 from homeassistant.const import CONF_NAME
 
@@ -26,7 +26,7 @@ class SmartIRProConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
 
         schema = vol.Schema(
             {
-                vol.Required(CONF_NAME, default="SmartIR Pro œÛÎ¸Ú"): str,
+                vol.Required(CONF_NAME, default="SmartIR Pro –ü—É–ª—å—Ç"): str,
                 vol.Required(CONF_SERVICE_NAME): (
                     vol.In(available_services) if available_services else str
                 ),
