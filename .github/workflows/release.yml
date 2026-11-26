@@ -8,6 +8,9 @@ on:
 permissions:
   contents: write
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -19,7 +22,9 @@ jobs:
 
       - name: Extract version from tag
         id: get_version
-        run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
+        run: |
+          CLEAN_VER=$(echo "${GITHUB_REF#refs/tags/}" | sed -E 's/^v\.?//')
+          echo "VERSION=${CLEAN_VER}" >> $GITHUB_OUTPUT
 
       - name: Update manifest.json version
         run: |
